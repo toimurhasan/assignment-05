@@ -52,7 +52,7 @@
       <!-- task board -->
       <section class="bg-white flex-[2.4] rounded-lg">
         <!-- mini dashboard -->
-        <section class="flex p-4 gap-4 border-b border-blue-100 border-dashed">
+        <section class="flex p-4 gap-4 border-b border-gray-200 border-dashed">
           <div class="flex-1 flex items-center gap-2 bg-blue-100 justify-center p-4 rounded-lg">
             <div class="bg-white rounded-full p-3">
               <img class="w-5" src="assets/checkbox.png" alt="checkbox" />
@@ -81,7 +81,24 @@
             </div>
           </div>
         </section>
-        
+        <!-- tasks section -->
+        <section class="grid grid-cols-3 gap-6 p-4">
+          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+            <p class="bg-white inline-block p-2 rounded-lg text-xs">ShopEase</p>
+            <h3 class="text-xl font-semibold">Fix Mobile Button Issue</h3>
+            <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
+              Debug using Chrome DevTools, check for overla...
+            </p>
+            <!-- deadline & completed button -->
+            <div class="flex justify-between pt-3 border-t-2 border-gray-300 border-dashed">
+              <div>
+                <p class="text-xs">Deadline</p>
+                <p class="text-sm">21 March 2025</p>
+              </div>
+              <button class="bg-blue-500 text-white py-1 px-4 rounded-lg">Completed</button>
+            </div>
+          </div>
+        </section>
       </section>
       <!-- activity log section -->
       <section class="bg-white flex-1 rounded-lg"></section>

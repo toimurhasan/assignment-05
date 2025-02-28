@@ -4,6 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Board</title>
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwindcss cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwindcss config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body></body>
+  <body class="font-poppins bg-blue-100 max-w-screen-xl mx-auto">
+    <header>
+      <nav class="flex justify-between bg-white p-4 my-4 rounded-lg">
+        <!-- DevBoard Logo -->
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="logo" />
+          <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+        <!-- Task Complete Checkbox & Theme Change -->
+        <div class="flex items-center gap-4">
+          <!-- Task Complete Checkbox -->
+          <div class="flex items-center gap-2 bg-blue-100 rounded-full py-2 px-3">
+            <img class="w-5" src="assets/checkbox.png" alt="checkbox" />
+            <p class="text-xl font-bold">23</p>
+          </div>
+          <!-- Theme Button -->
+          <div class="bg-blue-100 rounded-full p-2">
+            <img class="w-7" src="assets/theme-btn.png" alt="theme-btn" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex gap-4">
+      <!-- task board -->
+      <section class="bg-white flex-[2.4] rounded-lg">
+        <!-- mini dashboard -->
+        <section class="flex p-4 gap-4 border-b border-blue-100 border-dashed">
+          <div class="flex-1 flex items-center gap-2 bg-blue-100 justify-center p-4 rounded-lg">
+            <div class="bg-white rounded-full p-3">
+              <img class="w-5" src="assets/checkbox.png" alt="checkbox" />
+            </div>
+            <div>
+              <p class="text-xs">Task Assigned</p>
+              <h3 class="text-2xl font-bold">05</h3>
+            </div>
+          </div>
+          <div
+            class="flex-[2] flex justify-center items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg"
+          >
+            <img class="w-16" src="assets/board.png" alt="board" />
+            <p class="text-lg font-light text-white">
+              Discover Something <br />
+              New Today!
+            </p>
+          </div>
+          <div class="flex-1 flex items-center gap-2 bg-blue-100 justify-center p-4 rounded-lg">
+            <div class="bg-white rounded-full p-3">
+              <img class="w-5" src="assets/calender.png" alt="calender" />
+            </div>
+            <div>
+              <p class="">Wed,</p>
+              <h3 class="text-xl font-bold">Jul 28 2025</h3>
+            </div>
+          </div>
+        </section>
+        
+      </section>
+      <!-- activity log section -->
+      <section class="bg-white flex-1 rounded-lg"></section>
+    </main>
+  </body>
 </html>

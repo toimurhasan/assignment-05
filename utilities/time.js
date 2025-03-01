@@ -26,3 +26,29 @@ function getToday() {
   const index = today.getDay();
   return days[index];
 }
+
+function getLongDate() {
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const today = new Date();
+  const monthIndex = today.getMonth();
+  const month = months[monthIndex];
+  const date = today.getDate();
+  const year = today.getFullYear();
+
+  longDate = month + " " + date + " " + year;
+  return longDate;
+}

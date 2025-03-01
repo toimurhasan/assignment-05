@@ -182,7 +182,26 @@
         </section>
       </section>
       <!-- activity log section -->
-      <section class="bg-white flex-1 rounded-lg"></section>
+      <section class="bg-white flex-1 rounded-lg">
+        <div class="border-b border-gray-200 pb-4 border-dashed">
+          <!-- activity log icon -->
+          <div class="flex gap-2 items-center justify-center pt-4 pb-3">
+            <img class="w-6 h-6" src="assets/activity.png" alt="activity" />
+            <h3 class="text-2xl">Activity Log</h3>
+          </div>
+          <!-- clear history button  -->
+          <div class="flex justify-center">
+            <button class="bg-blue-400 py-2 px-4 text-white rounded-lg">Clear History</button>
+          </div>
+        </div>
+
+        <!-- task logs -->
+        <div id="task-logs" class="p-4">
+          <div class="bg-blue-100 p-2 rounded-lg text-gray-800">
+            You have Complete The Task Add Dark Mode at 12:48:15 PM
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

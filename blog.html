@@ -51,15 +51,21 @@
       <!-- Question 01 -->
       <section class="bg-white rounded-lg">
         <section class="px-4 py-6 border-b border-gray-200 border-dashed">
-          <h4 class="font-semibold text-xl">
+          <h4 id="dom-selector" class="font-semibold text-xl">
             Question-1: What are the different ways to select an element in the DOM?
           </h4>
         </section>
         <section class="px-4 py-6">
           <p class="font-light text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias ullam
-            commodi, cupiditate expedita vitae officiis. Numquam possimus voluptatem nam dignissimos
-            repellendus, vero officiis earum odio! Harum quasi esse assumenda.
+            <strong> <u> There are 5 primary ways to select an element in the DOM</u>. </strong>
+            These are: <br />
+            <ol class="list-decimal pl-8 space-y-2 pt-4">
+              <li>document.getElementById('id') = returns a single element</li>
+              <li>document.getElementsByClassName('class') = returns a HTMLCollection</li>
+              <li>document.getElementsByTagName('tag') = returns a HTMLCollection</li>
+              <li>document.querySelector('selector') = returns the first matching element</li>
+              <li>document.querySelectorAll('selector') = returns a NodeList</li>
+            </ol>
           </p>
         </section>
       </section>
@@ -72,10 +78,51 @@
         </section>
         <section class="px-4 py-6">
           <p class="font-light text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias ullam
-            commodi, cupiditate expedita vitae officiis. Numquam possimus voluptatem nam dignissimos
-            repellendus, vero officiis earum odio! Harum quasi esse assumenda.
+            There are major differences between <b>innerHTML</b>, <b>innerText</b>, and <b>textContent</b>. The table below shows them in details:
+            <br>
           </p>
+            <table class="mt-4 mb-2 bg-white border border-gray-300 shadow-lg rounded-lg">
+              <thead>
+                  <tr class="bg-blue-400 text-white">
+                      <th class="px-4 py-2 border">Features</th>
+                      <th class="px-4 py-2 border">innerHTML</th>
+                      <th class="px-4 py-2 border">innerText</th>
+                      <th class="px-4 py-2 border">textContent</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="bg-gray-100">
+                      <td class="px-4 py-2 border font-semibold">Function</td>
+                      <td class="px-4 py-2 border">Gets or sets HTML content inside a DOM element.</td>
+                      <td class="px-4 py-2 border">Gets or sets only the visible text inside a DOM element.</td>
+                      <td class="px-4 py-2 border">Gets or sets all text content, including hidden text.</td>
+                  </tr>
+                 
+                  <tr >
+                      <td class="px-4 py-2 border font-semibold">Hidden Elements</td>
+                      <td class="px-4 py-2 border">Includes hidden elements.</td>
+                      <td class="px-4 py-2 border">Ignores hidden elements.</td>
+                      <td class="px-4 py-2 border">Includes hidden elements.</td>
+                  </tr>
+                  <tr class="bg-gray-100">
+                      <td class="px-4 py-2 border font-semibold">Whitespace Handling</td>
+                      <td class="px-4 py-2 border">Collapses multiple spaces.</td>
+                      <td class="px-4 py-2 border">Collapses multiple spaces.</td>
+                      <td class="px-4 py-2 border">Preserves all whitespace.</td>
+                  </tr>
+                  <tr >
+                      <td class="px-4 py-2 border font-semibold">Performance</td>
+                      <td class="px-4 py-2 border">Slower (due to HTML parsing).</td>
+                      <td class="px-4 py-2 border">Slower (due to layout recalculations).</td>
+                      <td class="px-4 py-2 border">Faster (direct text retrieval).</td>
+                  </tr>
+                  
+                  
+              </tbody>
+          </table>
+          
+
+          
         </section>
       </section>
       <!-- Question 03 -->
@@ -85,9 +132,7 @@
         </section>
         <section class="px-4 py-6">
           <p class="font-light text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias ullam
-            commodi, cupiditate expedita vitae officiis. Numquam possimus voluptatem nam dignissimos
-            repellendus, vero officiis earum odio! Harum quasi esse assumenda.
+            Event delegation is a technique in JavaScript where a single event listener is attached to a parent element instead of attaching individual listeners to each child element. This takes advantage of the event propagation process, where events bubble up from the target element to the root of the document. By listening for events on the parent, you can handle events for multiple child elements, even those added dynamically after the page has loaded. This improves performance and simplifies the management of event listeners, especially when working with many child elements. For example, instead of attaching a click event to every button in a list, you can attach it to the parent ul element and use the event's target property to determine which button was clicked.
           </p>
         </section>
       </section>
@@ -98,9 +143,7 @@
         </section>
         <section class="px-4 py-6">
           <p class="font-light text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias ullam
-            commodi, cupiditate expedita vitae officiis. Numquam possimus voluptatem nam dignissimos
-            repellendus, vero officiis earum odio! Harum quasi esse assumenda.
+            Event bubbling is a process in the DOM (Document Object Model) where an event starts from the target element (the element that was clicked or interacted with) and then "bubbles up" to its parent elements in the DOM tree. This means that when an event is triggered on a specific element, it first executes the event handler for that element, then propagates up to the parent element, and continues up the hierarchy until it reaches the root of the document. This behavior allows parent elements to listen for events triggered on child elements, enabling techniques like event delegation. Event bubbling can be stopped using methods like event.stopPropagation(), preventing the event from propagating to ancestor elements.
           </p>
         </section>
       </section>
@@ -113,9 +156,13 @@
         </section>
         <section class="px-4 py-6">
           <p class="font-light text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat molestias ullam
-            commodi, cupiditate expedita vitae officiis. Numquam possimus voluptatem nam dignissimos
-            repellendus, vero officiis earum odio! Harum quasi esse assumenda.
+            <ul class="list-disc pl-8 space-y-2">
+              <li>In order to create an element using JS DOM method, we can use the
+                <b>document.createElement()</b> method. </li>
+              <li>Then if we want to add that element inside a parant
+                  element in DOM, we can simply select that element using any of the from <a class="underline text-blue-600" href="#dom-selector">here</a>.</li>
+              <li>To remove an element, we can simply use <b>element.remove()</b>  or <b>parent.removeChild()</b> [= it will remove a child element]. </li>
+            </ul>            
           </p>
         </section>
       </section>

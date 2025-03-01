@@ -17,7 +17,7 @@ for (let i = 0; i < completeBtns.length; i++) {
 
     const taskLog = document.createElement("div");
     taskLog.classList.add("bg-blue-100", "p-2", "rounded-lg", "text-gray-800");
-    taskLog.innerHTML = `You have Complete The Task ${taskName} at 12:48:15 PM`;
+    taskLog.innerHTML = `You have Complete The Task ${taskName} at ${getTime()}`;
 
     document.getElementById("task-logs").appendChild(taskLog);
   });

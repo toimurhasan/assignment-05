@@ -1,5 +1,5 @@
 function getTime() {
-  const now = new Date("January 01, 2025");
+  const now = new Date();
   const hour = now.getHours();
   const minute = now.getMinutes();
   const second = now.getSeconds();
@@ -18,4 +18,11 @@ function getTime() {
     const time = hour + ":" + minute + ":" + second + " AM";
     return time;
   }
+}
+
+function getToday() {
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const today = new Date();
+  const index = today.getDay();
+  return days[index];
 }

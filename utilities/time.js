@@ -49,6 +49,6 @@ function getLongDate() {
   const date = today.getDate();
   const year = today.getFullYear();
 
-  longDate = month + " " + date + " " + year;
+  longDate = month + " " + date + ", " + year;
   return longDate;
 }

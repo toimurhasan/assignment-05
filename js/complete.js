@@ -20,5 +20,9 @@ for (let i = 0; i < completeBtns.length; i++) {
     taskLog.innerHTML = `You have Complete The Task ${taskName} at ${getTime()}`;
 
     document.getElementById("task-logs").appendChild(taskLog);
+
+    if (document.getElementById("task-remaining").innerText === "0") {
+      alert("Congrates!!! You have completed all the current tasks.");
+    }
   });
 }

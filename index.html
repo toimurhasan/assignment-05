@@ -26,7 +26,7 @@
       };
     </script>
   </head>
-  <body class="font-poppins bg-blue-100 max-w-screen-xl mx-auto">
+  <body class="font-poppins bg-blue-100 bg-color-change max-w-screen-xl mx-auto">
     <header>
       <nav class="flex justify-between bg-white p-4 my-4 rounded-lg">
         <!-- DevBoard Logo -->
@@ -37,12 +37,12 @@
         <!-- Task Complete Checkbox & Theme Change -->
         <div class="flex items-center gap-4">
           <!-- Task Complete Checkbox -->
-          <div class="flex items-center gap-2 bg-blue-100 rounded-full py-2 px-3">
+          <div class="flex items-center gap-2 bg-blue-100 bg-color-change rounded-full py-2 px-3">
             <img class="w-5" src="assets/checkbox.png" alt="checkbox" />
             <p id="task-done" class="text-xl font-bold">23</p>
           </div>
           <!-- Theme Button -->
-          <div class="bg-blue-100 rounded-full p-2">
+          <div id="theme-btn" class="cursor-pointer bg-blue-100 bg-color-change rounded-full p-2">
             <img class="w-7" src="assets/theme-btn.png" alt="theme-btn" />
           </div>
         </div>
@@ -53,7 +53,9 @@
       <section class="bg-white flex-[2.4] rounded-lg">
         <!-- mini dashboard -->
         <section class="flex p-4 gap-4 border-b border-gray-200 border-dashed">
-          <div class="flex-1 flex items-center gap-2 bg-blue-100 justify-center p-4 rounded-lg">
+          <div
+            class="flex-1 flex items-center gap-2 bg-blue-100 bg-color-change justify-center p-4 rounded-lg"
+          >
             <div class="bg-white rounded-full p-3">
               <img class="w-5" src="assets/checkbox.png" alt="checkbox" />
             </div>
@@ -63,7 +65,7 @@
             </div>
           </div>
           <div
-            class="flex-[2] flex justify-center items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg"
+            class="cursor-pointer flex-[2] flex justify-center items-center gap-3 bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg"
           >
             <img class="w-16" src="assets/board.png" alt="board" />
             <p class="text-lg font-light text-white">
@@ -71,7 +73,9 @@
               New Today!
             </p>
           </div>
-          <div class="flex-1 flex items-center gap-2 bg-blue-100 justify-center p-4 rounded-lg">
+          <div
+            class="flex-1 flex items-center gap-2 bg-blue-100 bg-color-change justify-center p-4 rounded-lg"
+          >
             <div class="bg-white rounded-full p-3">
               <img class="w-5" src="assets/calender.png" alt="calender" />
             </div>
@@ -84,7 +88,7 @@
         <!-- tasks section -->
         <section class="grid grid-cols-3 gap-6 p-4">
           <!-- task 01 -->
-          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+          <div class="bg-blue-100 bg-color-change rounded-lg p-4 space-y-3">
             <p class="bg-white inline-block p-2 rounded-lg text-xs">ShopEase</p>
             <h3 class="text-xl font-semibold">Fix Mobile Button Issue</h3>
             <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
@@ -104,7 +108,7 @@
             </div>
           </div>
           <!-- task 02 -->
-          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+          <div class="bg-blue-100 bg-color-change rounded-lg p-4 space-y-3">
             <p class="bg-white inline-block p-2 rounded-lg text-xs">CloudSync</p>
             <h3 class="text-xl font-semibold">Add Dark Mode</h3>
             <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
@@ -124,7 +128,7 @@
             </div>
           </div>
           <!-- task 03 -->
-          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+          <div class="bg-blue-100 bg-color-change rounded-lg p-4 space-y-3">
             <p class="bg-white inline-block p-2 rounded-lg text-xs">SwiftPay</p>
             <h3 class="text-xl font-semibold">Optimize Home page</h3>
             <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
@@ -144,7 +148,7 @@
             </div>
           </div>
           <!-- task 04 -->
-          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+          <div class="bg-blue-100 bg-color-change rounded-lg p-4 space-y-3">
             <p class="bg-white inline-block p-2 rounded-lg text-xs">Meta</p>
             <h3 class="text-xl font-semibold">Add new emoji 🤲</h3>
             <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
@@ -164,7 +168,7 @@
             </div>
           </div>
           <!-- task 05 -->
-          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+          <div class="bg-blue-100 bg-color-change rounded-lg p-4 space-y-3">
             <p class="bg-white inline-block p-2 rounded-lg text-xs">Google LLC</p>
             <h3 class="text-xl font-semibold">Integrate OpenAI API</h3>
             <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
@@ -184,7 +188,7 @@
             </div>
           </div>
           <!-- task 06 -->
-          <div class="bg-blue-100 rounded-lg p-4 space-y-3">
+          <div class="bg-blue-100 bg-color-change rounded-lg p-4 space-y-3">
             <p class="bg-white inline-block p-2 rounded-lg text-xs">Glassdoar</p>
             <h3 class="text-xl font-semibold">Improve Job searching</h3>
             <p class="text-sm text-gray-600 bg-white rounded-lg p-4">
@@ -226,8 +230,10 @@
       </section>
     </main>
     <script src="utilities/time.js"></script>
+    <script src="utilities/randomColor.js"></script>
     <script src="js/complete.js"></script>
     <script src="js/clearHistory.js"></script>
     <script src="js/date.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>

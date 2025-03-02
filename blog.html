@@ -93,9 +93,9 @@
               <tbody>
                   <tr class="bg-gray-100">
                       <td class="px-4 py-2 border font-semibold">Function</td>
-                      <td class="px-4 py-2 border">Gets or sets HTML content inside a DOM element.</td>
-                      <td class="px-4 py-2 border">Gets or sets only the visible text inside a DOM element.</td>
-                      <td class="px-4 py-2 border">Gets or sets all text content, including hidden text.</td>
+                      <td class="px-4 py-2 border">Gets or sets <b>HTML content</b> inside a DOM element.</td>
+                      <td class="px-4 py-2 border">Gets or sets only the <b>visible text</b> inside a DOM element.</td>
+                      <td class="px-4 py-2 border">Gets or sets <b>all text content</b>, including hidden texts.</td>
                   </tr>
                  
                   <tr >
@@ -126,13 +126,16 @@
         </section>
       </section>
       <!-- Question 03 -->
-      <section class="bg-white rounded-lg">
+      <section id="event-delegation" class="bg-white rounded-lg">
         <section class="px-4 py-6 border-b border-gray-200 border-dashed">
           <h4 class="font-semibold text-xl">Question-3: What is event delegation in the DOM?</h4>
         </section>
-        <section class="px-4 py-6">
-          <p class="font-light text-lg">
-            Event delegation is a technique in JavaScript where a single event listener is attached to a parent element instead of attaching individual listeners to each child element. This takes advantage of the event propagation process, where events bubble up from the target element to the root of the document. By listening for events on the parent, you can handle events for multiple child elements, even those added dynamically after the page has loaded. This improves performance and simplifies the management of event listeners, especially when working with many child elements. For example, instead of attaching a click event to every button in a list, you can attach it to the parent ul element and use the event's target property to determine which button was clicked.
+        <section class="px-4 py-6 font-light text-lg space-y-4 text-justify">
+          <p>
+            Event delegation is a technique in JavaScript where a single event listener is attached to a parent element instead of attaching event listeners to multiple child elements. When an event occurs on a child element, the event bubbles up the DOM tree, and the parent element's event listener handles the event based on the target element.
+          </p>
+          <p>
+            In other words, instead of adding separate event listeners to many child elements (like buttons or list items), you add one event listener to their common parent. Then, when you click on any child, the event "bubbles up" to the parent, and the parent checks which child was clicked.
           </p>
         </section>
       </section>
@@ -141,9 +144,15 @@
         <section class="px-4 py-6 border-b border-gray-200 border-dashed">
           <h4 class="font-semibold text-xl">Question-4: What is event bubbling in the DOM?</h4>
         </section>
-        <section class="px-4 py-6">
-          <p class="font-light text-lg">
-            Event bubbling is a process in the DOM (Document Object Model) where an event starts from the target element (the element that was clicked or interacted with) and then "bubbles up" to its parent elements in the DOM tree. This means that when an event is triggered on a specific element, it first executes the event handler for that element, then propagates up to the parent element, and continues up the hierarchy until it reaches the root of the document. This behavior allows parent elements to listen for events triggered on child elements, enabling techniques like event delegation. Event bubbling can be stopped using methods like event.stopPropagation(), preventing the event from propagating to ancestor elements.
+        <section class="px-4 py-6 font-light text-lg space-y-4 text-justify ">
+          <p >
+            Event Bubbling is a concept in the DOM where an event starts from the target element and then bubbles up (or propagates) to its parent elements, all the way up to the root element.
+            </p> 
+            <p>
+             This means that when an event is triggered on a specific element, it first executes the event handler for that element, then propagates up to the parent element, and continues up the hierarchy until it reaches the root of the document. 
+             </p>
+             <p>
+             This behavior allows parent elements to listen for events triggered on child elements, enabling techniques like <a class="text-blue-800 underline" href="#event-delegation">event delegation</a>. Event bubbling can be stopped using methods like <b>event.stopPropagation()</b>, preventing the event from propagating to ancestor elements.
           </p>
         </section>
       </section>
